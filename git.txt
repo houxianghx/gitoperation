@@ -1,0 +1,60 @@
+安装git
+msysgit.github.io
+
+安装时
+use git from git bash only
+
+配置path
+c:\program files\git\bin
+
+配置git用户名和邮箱
+右键git bash
+git config --global user.name "uername"
+git config --global user.email "email"
+
+查看 c:\users\happy\.gitconfig
+
+搭建GIT服务器（远程仓库）：统一的托管网站（https://github.com/)
+
+为了在本地和远程仓库之间进行免密钥登陆，可以配置ssh
+
+配置ssh:现在本地配置，发送给远程
+ssh-keygen -t rsa -C emailaddress
+
+密钥位置 c:\user\happy\.ssh
+
+将id_rsa.pub内容发送给远程仓库
+github - settings->ssh and gpg keys->new ssh key->key中输入刚才生成的ssh
+
+测试连通性
+ssh -T git@github.com - yes
+如果本地与远程成功通信，则可以在/.ssh目录中发现know_hosts文件
+
+在本地新建git项目
+在项目根目录	右键 - git bash - git init
+
+在远程新建git项目
+new - 建立项目 - 生成git@github.com:houxianghx/gitoperation.git
+
+远程项目与本地项目关联
+git remote add original git@github.com:houxianghx/gitoperation.git
+
+第一次发布项目
+git add . 	//本地-暂存区
+git commit -m "注释"
+git push -u original master
+
+
+第一次下载项目
+
+更新
+
+提交
+
+
+
+
+
+
+
+
