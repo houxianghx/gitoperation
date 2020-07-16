@@ -52,5 +52,8 @@ git add .
 git commit -m "注释"
 git push original master
 
+更新（远程-本地）
+git pull
+
 
 
